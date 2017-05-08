@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    
+    <color name="colormain">#20BEE1</color>
+    <color name="blackopaque">#07252D</color>
+    <color name="text_main">#FFFFFF</color>
+
+    <color name="white_opaque">#ffffff</color>
+    <color name="white_faded">#80FFFFFF</color>
+    <color name="black_opaque">#000000</color>
+    <color name="list_alternate">#cdcdcd</color>
+    <color name="alternate">#cdcdcd</color>
+    <color name="drawer">#90000000</color>
+    <color name="subheader">#082a6f</color>
+    <color name="panel_book_divider">#e4bb1f</color>
+
+</resources>

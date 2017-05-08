@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="acuedd.com.gt.metroguate.ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling"
+    android:background="@color/colormain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutInitial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rellaysearch"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/alternate">
+                <TextView
+                    android:id="@+id/lbltitlesearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="2dp"
+                    android:gravity="center"
+                    android:text="LOCALIZA TU BUS"
+                    android:textColor="@color/black_opaque"
+                    android:textStyle="bold"
+                    />
+
+                <ImageView
+                    android:layout_toRightOf="@id/lbltitlesearch"
+                    android:id="@+id/imageSearchTitle"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    app:srcCompat="@drawable/app2_buscarb" />
+
+            </RelativeLayout>
+            <ImageView
+                android:layout_marginTop="-170dp"
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/oa_bus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/blackopaque">
+                <TextView
+                    android:id="@+id/lblTitlelocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="2dp"
+                    android:text="SELECCIONA TU UBICACION"
+                    android:textColor="@color/text_main"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgFrom"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    app:srcCompat="@drawable/app2_ubicacion" />
+
+                <Spinner
+                    android:id="@+id/spinnerFrom"
+                    android:layout_width="240dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:layout_toRightOf="@id/imgFrom"
+                    android:spinnerMode="dropdown"></Spinner>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blackopaque">
+
+                <ImageView
+                    android:id="@+id/imgTo"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    app:srcCompat="@drawable/app2_destino" />
+
+                <Spinner
+                    android:id="@+id/spinnerTo"
+                    android:layout_width="240dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:layout_toRightOf="@id/imgTo"
+                    android:spinnerMode="dropdown"></Spinner>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/imageSearch"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    app:srcCompat="@drawable/app2_buscarb" />
+
+                <ImageView
+                    android:id="@+id/imageDrop"
+                    android:layout_toRightOf="@+id/imageSearch"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    app:srcCompat="@drawable/app2_borrar_on" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ListView
+                    android:id="@+id/ListBus"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:nestedScrollingEnabled="true"
+                    android:divider="@drawable/divider_book">
+
+                </ListView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

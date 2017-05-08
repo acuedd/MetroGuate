@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colormain">
+
+    <RelativeLayout
+        android:id="@+id/relLayInfoRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white_faded">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black_opaque"
+            android:textStyle="bold"
+            android:text="Ruta 1"
+            android:gravity="center"
+            android:textSize="26dp"
+            android:id="@+id/tviewH1"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Trasnmetro Eje Sur"
+            android:gravity="center"
+            android:layout_toRightOf="@id/tviewH1"
+            android:textSize="14dp"
+            android:id="@+id/txtbus" />
+
+        <TextView
+            android:id="@+id/txtobs"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtbus"
+            android:layout_toEndOf="@+id/tviewH1"
+            android:layout_toRightOf="@+id/tviewH1"
+            android:gravity="center"
+            android:text="tomar transmetro Z.10"
+            android:textColor="@color/drawer"
+            android:textSize="11dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_toRightOf="@+id/relLayInfoRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white_faded">
+
+        <TextView
+            android:id="@+id/lblfee"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Valor del pasaje:"
+            android:gravity="center"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/lblfeeInfo"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:textColor="@color/black_opaque"
+            android:text="Q. 1.00"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:layout_toRightOf="@+id/lblfee"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
