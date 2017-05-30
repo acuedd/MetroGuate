@@ -16,5 +16,7 @@
     <color name="drawer">#90000000</color>
     <color name="subheader">#082a6f</color>
     <color name="panel_book_divider">#e4bb1f</color>
+    <color name="red">#dd0808</color>
+    <color name="green">#26af07</color>
 
 </resources>

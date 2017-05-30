@@ -53,6 +53,13 @@ public class itemStopsAdapter extends ArrayAdapter<itemStops> {
             txtobs.setText(item.getObservations());
             txtprice.setText(item.getPrice());
 
+            if(position % 2 == 0){
+                convertView.setBackgroundColor(context.getResources().getColor(R.color.colormain));
+            }
+            else{
+                convertView.setBackgroundColor(context.getResources().getColor(R.color.black_opaque));
+            }
+
         }
         return convertView;
     }

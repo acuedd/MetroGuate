@@ -84,6 +84,7 @@
 
             </LinearLayout>
             <RelativeLayout
+                android:id="@+id/rl_ubicacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -107,6 +108,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/rl_destino"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/blackopaque">
@@ -131,6 +133,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/rl_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -161,12 +164,29 @@
                 <ListView
                     android:id="@+id/ListBus"
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="200dp"
                     android:nestedScrollingEnabled="true"
                     android:divider="@drawable/divider_book">
-
                 </ListView>
-
+                <LinearLayout
+                    android:id="@+id/ll_searchNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/drawer"
+                    android:gravity="center"
+                    android:padding="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nueva Busqueda"
+                        android:textColor="@color/white_opaque"/>
+                    <ImageView
+                        android:id="@+id/imagNew"
+                        android:layout_width="150dp"
+                        android:layout_height="45dp"
+                        app:srcCompat="@drawable/app2_buscarb" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

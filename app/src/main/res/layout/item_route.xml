@@ -1,77 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/colormain">
 
-    <RelativeLayout
-        android:id="@+id/relLayInfoRoute"
+    <LinearLayout
+        android:id="@+id/ll_ruta"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white_faded">
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@color/green"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"/>
 
         <TextView
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:textColor="@color/black_opaque"
+            android:textColor="@color/white_opaque"
             android:textStyle="bold"
             android:text="Ruta 1"
             android:gravity="center"
-            android:textSize="26dp"
+            android:textSize="16dp"
             android:id="@+id/tviewH1"/>
-
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/ll_ruta">
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/white_opaque"
             android:text="Trasnmetro Eje Sur"
             android:gravity="center"
-            android:layout_toRightOf="@id/tviewH1"
             android:textSize="14dp"
             android:id="@+id/txtbus" />
 
         <TextView
             android:id="@+id/txtobs"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtbus"
-            android:layout_toEndOf="@+id/tviewH1"
-            android:layout_toRightOf="@+id/tviewH1"
             android:gravity="center"
             android:text="tomar transmetro Z.10"
-            android:textColor="@color/drawer"
+            android:textColor="@color/white_opaque"
             android:textSize="11dp" />
-    </RelativeLayout>
+    </LinearLayout>
 
-    <RelativeLayout
-        android:layout_toRightOf="@+id/relLayInfoRoute"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white_faded">
+        android:layout_height="40dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@color/white_opaque"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true">
 
         <TextView
             android:id="@+id/lblfee"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryDark"
             android:text="Valor del pasaje:"
-            android:gravity="center"
+            android:layout_gravity="center_vertical"
             android:textSize="12dp" />
 
         <TextView
             android:id="@+id/lblfeeInfo"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textColor="@color/black_opaque"
             android:text="Q. 1.00"
             android:gravity="center"
-            android:textSize="16dp"
-            android:layout_toRightOf="@+id/lblfee"/>
-
-
-    </RelativeLayout>
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:textSize="16dp"/>
+    </LinearLayout>
 
 
 </RelativeLayout>

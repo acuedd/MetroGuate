@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 import java.lang.ref.WeakReference;
@@ -32,9 +33,11 @@ public class ScrollingActivity extends AppCompatActivity {
     private ArrayAdapter<String> aBusStops;
     private ListView ListBus;
     private LinearLayout LayoutList;
-    private LinearLayout layoutInitial;
+    private LinearLayout layoutInitial,ll_searchNew;
     private LinearLayout layoutSearch;
     private ArrayAdapter<itemStops> adapter;
+
+    private RelativeLayout rl_ubicacion,rl_destino,rl_buttons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,11 @@ public class ScrollingActivity extends AppCompatActivity {
         LayoutList = (LinearLayout) findViewById(R.id.layoutList);
         layoutInitial = (LinearLayout) findViewById(R.id.layoutInitial);
         layoutSearch = (LinearLayout) findViewById(R.id.layoutSearch);
+        ll_searchNew = (LinearLayout) findViewById(R.id.ll_searchNew);
+
+        rl_ubicacion = (RelativeLayout) findViewById(R.id.rl_ubicacion);
+        rl_destino = (RelativeLayout) findViewById(R.id.rl_destino);
+        rl_buttons = (RelativeLayout) findViewById(R.id.rl_buttons);
 
         int limit = 8;
         String[] spinnerStops = new String[limit];
@@ -81,6 +89,9 @@ public class ScrollingActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                rl_ubicacion.setVisibility(View.GONE);
+                rl_destino.setVisibility(View.GONE);
+                rl_buttons.setVisibility(View.GONE);
                 showList();
             }
         });
@@ -95,12 +106,23 @@ public class ScrollingActivity extends AppCompatActivity {
             }
         });
 
-
+        ImageView imagNew = (ImageView) findViewById(R.id.imagNew);
+        imagNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LayoutList.setVisibility(View.GONE);
+                ll_searchNew.setVisibility(View.GONE);
+                rl_ubicacion.setVisibility(View.VISIBLE);
+                rl_destino.setVisibility(View.VISIBLE);
+                rl_buttons.setVisibility(View.VISIBLE);
+            }
+        });
 
     }
 
     public void showList(){
         LayoutList.setVisibility(View.VISIBLE);
+        ll_searchNew.setVisibility(View.VISIBLE);
 
         List<itemStops> xacts = new ArrayList<>();
         itemStops temp = new itemStops();
