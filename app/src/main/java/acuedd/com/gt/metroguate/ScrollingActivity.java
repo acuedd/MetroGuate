@@ -128,14 +128,14 @@ public class ScrollingActivity extends AppCompatActivity {
         itemStops temp = new itemStops();
         temp.setRouteName("Ruta 1");
         temp.setStopName("Tikal futura");
-        temp.setObservations("alsfjaksfalsdjfa");
+        temp.setObservations("");
         temp.setPrice("Q. 5.00");
         xacts.add(temp);
 
         itemStops temp2 = new itemStops();
         temp2.setRouteName("Ruta 2");
         temp2.setStopName("Trebol");
-        temp2.setObservations("alsfjaksfalsdjfa");
+        temp2.setObservations("");
         temp2.setPrice("Q. 5.00");
         xacts.add(temp2);
 
