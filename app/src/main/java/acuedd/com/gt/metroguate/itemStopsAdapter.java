@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -53,10 +54,14 @@ public class itemStopsAdapter extends ArrayAdapter<itemStops> {
             txtobs.setText(item.getObservations());
             txtprice.setText(item.getPrice());
 
+            ImageView vineta = (ImageView) convertView.findViewById(R.id.vineta);
+
             if(position % 2 == 0){
+                vineta.setImageDrawable(context.getResources().getDrawable(R.drawable.circle_green));
                 convertView.setBackgroundColor(context.getResources().getColor(R.color.colormain));
             }
             else{
+                vineta.setImageDrawable(context.getResources().getDrawable(R.drawable.circle_red));
                 convertView.setBackgroundColor(context.getResources().getColor(R.color.black_opaque));
             }
 

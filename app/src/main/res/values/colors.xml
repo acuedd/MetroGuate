@@ -18,5 +18,7 @@
     <color name="panel_book_divider">#e4bb1f</color>
     <color name="red">#dd0808</color>
     <color name="green">#26af07</color>
+    <color name="gris">#DBDBDB</color>
+    <color name="black_opacity">#50000000</color>
 
 </resources>

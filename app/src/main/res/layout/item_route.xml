@@ -12,9 +12,10 @@
         android:orientation="horizontal"
         android:layout_alignParentLeft="true">
         <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:src="@color/green"
+            android:id="@+id/vineta"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/circle_green"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_gravity="center_vertical"/>

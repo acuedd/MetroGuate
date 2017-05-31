@@ -62,6 +62,7 @@
             android:id="@+id/layoutSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colormain"
             android:orientation="vertical">
 
             <LinearLayout
@@ -86,7 +87,8 @@
             <RelativeLayout
                 android:id="@+id/rl_ubicacion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/colormain">
 
                 <ImageView
                     android:id="@+id/imgFrom"
@@ -137,6 +139,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:background="@color/white_opaque"
                 android:padding="10dp">
 
 
@@ -161,10 +164,50 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/black_opacity">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/ruta"/>
+                    
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_alignParentRight="true">
+                        
+                        <LinearLayout
+                            android:layout_width="175dp"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/app2_ubicacion"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="175dp"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/app2_destino"/>
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+
+                </RelativeLayout>
+
                 <ListView
                     android:id="@+id/ListBus"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="100dp"
                     android:nestedScrollingEnabled="true"
                     android:divider="@drawable/divider_book">
                 </ListView>
@@ -173,14 +216,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="@color/drawer"
+                    android:background="@color/gris"
                     android:gravity="center"
                     android:padding="15dp">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nueva Busqueda"
-                        android:textColor="@color/white_opaque"/>
+                        android:textColor="@color/black_opaque"/>
                     <ImageView
                         android:id="@+id/imagNew"
                         android:layout_width="150dp"
